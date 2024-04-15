@@ -5,9 +5,10 @@ import time
 
 start = time.time()
 
-canvas_w = 800
-canvas_h = 500
-iteration = 250
+canvas_w = 900
+canvas_h = 750
+iteration = 50
+zoom = 1.4
 
 # Initialisation et création d'une fenêtre aux dimensions spécifiéés munie d'un titre
 pygame.init()
@@ -38,6 +39,7 @@ def module(z):
     return a ** 2 + b ** 2
 
 def main():
+    global iteration
     for i in range(canvas_w + 1):
         if i % (canvas_w / 10) == 0:
             print(i / (canvas_w / 100), "%")
@@ -65,6 +67,11 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT: # Pour quitter l'application en fermant la fenêtre
                 loop = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                x, y = pygame.mouse.get_pos()
+                print(f'Mouse clicked at {x}, {y}')
+                c = convert_pix2c([x,y])
+                print(f'C vaut {c[0]}, {c[1]}')
       
     pygame.quit()
 
