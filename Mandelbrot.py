@@ -1,6 +1,10 @@
 # import tkinter as tk
 """
 https://gist.github.com/jfpuget/60e07a82dece69b011bb
+https://realpython.com/mandelbrot-set-python/
+https://medium.com/swlh/visualizing-the-mandelbrot-set-using-python-50-lines-f6aa5a05cf0f
+https://www.codingame.com/playgrounds/2358/how-to-plot-the-mandelbrot-set/mandelbrot-set
+https://stackoverflow.com/questions/26447915/how-to-render-mandelbrot-set-faster
 """
 import math
 import pygame
